@@ -1,34 +1,25 @@
 #include <stdio.h>
-#include <math.h>
-/* Función matemática.
-El programa obtiene el resultado de una función.
-OP y T: variables de tipo entero.
-RES: variable de tipo real. */
+/* Incremento de salario.
+El programa, al recibir como dato el nivel de un profesor, incrementa su
+â¥salario en funciÃ³n de la tabla 2.3.
+NIV: variable de tipo entero.
+SAL: variables de tipo real. */
 void main(void)
 {
-int OP, T;
-
-float RES;
-printf(“Ingrese la opción del cálculo y el valor entero: “);
-
-scanf(“%d %d”, &OP, &T);
-switch(OP)
+float SAL;
+int NIV;
+printf(â€œlicenciado en contabilidadâ€œ);
+scanf(â€œ%dâ€, &NIV);
+printf(â€œIngrese el salario: â€œ);
+scanf(â€œ%fâ€, &SAL);
+switch(NIV)
+printf(â€œingrese el salario: â€œ);
+scanf(â€œ%fâ€, &SAL);
+switch(NIV)
 {
-
-case 1: RES = T / 5;
-
-break;
-
-case 2: RES = pow(T,T);
-/* La función pow está definida en la biblioteca math.h */
-
-break;
-case 3:
-
-case 4: RES = 6 * T/2;
-break;
-default: RES = 1;
-break;
+case 1: SAL = SAL * 1.0035; break;
+case 2: SAL = SAL * 1.0041; break;
+case 3: SAL = SAL * 1.0048; break;
+case 4: SAL = SAL * 1.0053; break;
 }
-printf(“\nResultado: %7.2f”, RES);
-}
+printf(â€œ\n\nNivel: %d \tNuevo salario: %8.2fâ€,NIV, SAL);
