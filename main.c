@@ -1,18 +1,12 @@
-#include <stdio.h>
-
-/* incremento de precio.
-el programa al recibir datos como dato el precio de un producto, incrementa al
-mismo 11% si este es inferior a 1500$
-PRE Y NPR: son variable de tipo reasl. */
-
-void main (void)
+/* El conjunto de instrucciones muestra la sintaxis de la estructura switch
+➥en C. */
+. . .
+switch(<selector>)
 {
-float PRE, NPR;
-
-printf("Ingrese un dato: ");
-scanf ("%F" , &PRE);
-if (PRE < 1500){
-        NPR = PRE * 1.11;
-printf("\n nuevo precio: %7 .2f", NPR);
-}
-}
+case <valor1> : <acción1>;
+break; /* Es necesario escribir break para no evaluar los
+➥otros casos. */
+case <valor2> : < acción2>;
+break;
+case <valorN> : <acciónN>;
+break;
