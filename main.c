@@ -1,22 +1,24 @@
 #include <stdio.h>
-#include <math.h>
-/* Expresión.
-El programa, al recibir como datos tres valores enteros, establece si los
-➥mismos satisfacen una expresión determinada.
-R, T y Q: variables de tipo entero.
-RES: variable de tipo real. */
+/* Billete de ferrocarril.
+El programa calcula el costo de un billete de ferrocarril teniendo en
+➥cuenta la distancia entre las dos ciudades y el tiempo de permanencia
+➥del pasajero.
+DIS y TIE: variables de tipo entero.
+BIL: variable de tipo real. */
 void main(void)
 {
-float RES;
+int DIS, TIE;
 
-int R, T, Q;
-printf(“Ingrese los valores de R, T y Q: “);
+float BIL;
 
-scanf(“%d %d %d”, &R, &T, &Q);
-RES = pow(R, 4) – pow(T, 3) + 4 * pow(Q, 2);
+printf(“Ingrese la distancia entre ciudades y el tiempo de estancia: “);
 
+scanf(“%d %d”, &DIS, &TIE);
+if ((DIS*2 > 500) && (TIE > 10))
+BIL = DIS * 2 * 0.19 * 0.8;
 
-if (RES < 820)
-printf(“\nR = %d\tT = %d\t Q = %d”, R, T, Q);
+else
+BIL = DIS * 2 * 0.19;
+printf(“\n\nCosto del billete: %7.2f”, BIL);
 
 }
