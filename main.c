@@ -1,18 +1,18 @@
 #include <stdio.h>
-/* promedio curso.
-el programa, al recibir como dato el promedio de un alumno en un curso
- universitario, escribe aprobado si su promedio es
-mayor o igual a 6
 
-pro: varibale de tipo real. */
-
+/* incremento de precio.
+el programa al recibir datos como dato el precio de un producto, incrementa al
+mismo 11% si este es inferior a 1500$
+PRE Y NPR: son variable de tipo reasl. */
 
 void main (void)
- {
-     float pro;
-     printf(*60-100*);
-     scanf ("%f", "&pro")
-     if (0 >=6)
-    printf
+{
+float PRE, NPR;
 
- }
+printf("Ingrese un dato: ");
+scanf ("%F" , &PRE);
+if (PRE < 1500){
+        NPR = PRE * 1.11;
+printf("\n nuevo precio: %7 .2f", NPR);
+}
+}
